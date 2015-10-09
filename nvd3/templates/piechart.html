@@ -16,7 +16,7 @@
     {% endif %}
 
     chart.tooltipContent(function(key, y, e, graph) {
-          var x = String(key);
+          var x = String(key.data.label);
               {{ chart.tooltip_condition_string }}
               tooltip_str = '<center><b>'+x+'</b></center>' + y;
               return tooltip_str;
